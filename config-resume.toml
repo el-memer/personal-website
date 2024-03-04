@@ -1,0 +1,31 @@
+baseURL = 'https://prideness.fr/resume'
+languageCode = 'en-us'
+title = 'Merwan Resume'
+theme = 'almeida-cv'
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+enableEmoji = true
+contentDir = "content/resume"
+publishDir = "public/resume"
+staticDir = "static/resume"
+dataDir = "data/resume"
+
+[params]
+enableMetaTags = true
+colorLight = "#181a1b"
+colorDark = "#a8a095"
+colorPageBackground = "#212529"
+colorPrimary = "#b2aca2"
+colorSecondary ="#596164"
+colorIconPrimary = "#beb2ad"
+colorIconBackground = "#4f271f"
+colorRightColumnBackground = "#1e2021"
+colorRightColumnHeadingText = "#a8a095"
+colorRightColumnBodyText = "#a8a095"
+colorRightColumnIconPrimary = "#beb2ad"
+colorRightColumnIconBackground = "#4f271f"
+
+pages = 1
+# Set this param to 'true' to swap the bar positions
+swapColumns = false
+

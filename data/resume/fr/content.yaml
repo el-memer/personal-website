@@ -1,0 +1,114 @@
+BasicInfo:
+  FirstName: Merwan
+  LastName: SETITA
+  Photo: img/avatar.jpg
+  Contacts:
+    - Icon: fas fa-phone
+      Info: + 33 6 24 54 38 18
+    - Icon: fas fa-envelope
+      Info: merwan.setita@gmail.com
+    - Icon: fas fa-globe
+      Info: prideness.fr
+    - Icon: fas fa-map-marker-alt
+      Info: Marseille, France
+
+Profil: Super SRE
+
+Experience:
+  - Employer: Scaleway
+    Place: Full Remote
+    Positions:
+      - Title: Platform Devops Advocate
+        Date: June 2023 - Now
+        Details:
+          - Onboard et formation équipes produits aux produits platform interne (k8s, observability, gitops)
+          - Mise en oeuvre outillage et bonnes pratiques
+          - Rédaction documentation et showcase techniques
+          - Accompagenement à la définition et mise en place SLI/SLO
+        Badges: ['K8s', 'GitOps', 'FluxCD', 'Helm', 'Traefik', 'Hashicorp Vault', 'VictoriaMetrics', 'Prometheus', 'Grafana']
+  - Employer: Mailinblack
+    Place: Marseille, FR
+    Positions:
+      - Title: Devops / SRE
+        Date: Aug 2020 - June 2023
+        Details:
+          - Prodification Applications
+          - Mise et place et maintenance pipelines CI/CD
+          - Migration vers solution IAAC
+          - Accompagnement/Tooling Équipes DEV/QA/R&D
+          - Observabilité (Métriques/Dashboard) & Gestion réponse incidents
+          - Amélioration des process de RUN (Post-Mortems/Rituels/...)
+        Badges: ['K8s', 'Azure', 'GitlabCI', 'Helm', 'Terraform', 'Ansible', 'Jenkins', 'Python', 'Docker', 'Golang', 'ELK']
+  - Employer: OP-Rate
+    Place: Toulouse, FR
+    Positions:
+      - Title: Devops
+        Date: 2019 - 2020
+        Details:
+          - Portage et conteneurisation applications dans le cloud
+          - Design et implémentation de logique de CI/CD
+          - Architecture d’infrastructure cloud
+          - Proposition solutions d’accompagnement
+          - Pilotage prestations client
+          - Réalisation de solutions d’automatisation IAAS (Infrastructure As A Service)
+        Badges: ['K8s', 'GCP', 'GitlabCI', 'Helm', 'Terraform', 'Ansible', 'CircleCI', 'Python', 'Docker']
+  - Employer: Sopra Steria
+    Place: Toulouse, FR
+    Positions:
+      - Title: Team Lead
+        Date: 2015 - 2018
+        Details:
+          - Rédaction spécifications et analyse du besoin
+          - Réalisation chiffrages
+          - Pilotage équipe technique
+          - Gestion relation client
+        Badges: ['C', 'ASP', 'Gitlab', 'IIS', 'VBA', Functional 'Analysis', Team 'Management', 'Conception','Scrum']
+Education:
+  - Course: Master MIAGE en alternance
+    Place: Université de Toulouse
+    Date: 2012 - 2015
+    Details: Gestion de projet, Langages Objets, Méthodes agiles, SQL
+
+Skills:
+  - Family: Développement
+    Items:
+      - Python
+      - Bash
+      - Golang
+  - Family: Cloud
+    Items:
+      - Azure
+      - Scaleway
+      - GCP
+      - Helm
+      - Kubernetes
+  - Family: CI/CD
+    Items:
+      - Git 
+      - Docker
+      - Jenkins
+      - Gitlab/GitlabCI
+      - Release Management
+  - Family: Observabilité
+    Items:
+      - Grafana
+      - ELK Stack
+      - VictoriaMetrics/Prometheus
+      - SLI/SLO
+
+Languages:
+  - Name: French
+    Level: Langue Maternelle
+  - Name: English
+  - Name: Spanish
+
+Diplomas:
+  - Microsoft Azure Fondamentals (AZ-900)
+  - Google Cloud Architect (Expirée en 2021)
+
+Interests:
+  - Théâtre d'improvisation
+  - Lecture
+  - Voile
+  - LOTR
+  - Formation

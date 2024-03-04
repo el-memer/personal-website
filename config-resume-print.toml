@@ -1,0 +1,31 @@
+baseURL = 'https://prideness.fr/print'
+languageCode = 'en-us'
+title = 'My printable CV'
+theme = 'almeida-cv'
+defaultContentLanguage = "fr"
+enableRobotsTXT = true
+enableEmoji = true
+contentDir = "content/resume"
+publishDir = "public/resume"
+staticDir = "static/resume"
+dataDir = "data/resume"
+
+[params]
+enableMetaTags = true
+
+colorLight = "#fff"
+colorDark = "#424143"
+colorPageBackground = "#ddd"
+colorPrimary = "#658fab"
+colorSecondary = "#aaa"
+colorIconPrimary = "#fff"
+colorIconBackground = "#658fab"
+colorRightColumnBackground = "#efebe7"
+colorRightColumnHeadingText = "#424143"
+colorRightColumnBodyText = "#424143"
+colorRightColumnIconPrimary = "#fff"
+colorRightColumnIconBackground = "#658fab"
+pages = 1
+# Set this param to 'true' to swap the bar positions
+swapColumns = false
+

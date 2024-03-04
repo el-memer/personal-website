@@ -1,0 +1,110 @@
+BasicInfo:
+  FirstName: Merwan
+  LastName: SETITA
+  Photo: img/avatar.jpg
+  Contacts:
+    - Icon: fas fa-phone
+      Info: + 33 6 24 54 38 18
+    - Icon: fas fa-envelope
+      Info: merwan.setita@gmail.com
+    - Icon: fas fa-globe
+      Info: prideness.fr
+    - Icon: fas fa-map-marker-alt
+      Info: Marseille, France
+
+Profile: 
+
+Experience:
+  - Employer: Scaleway
+    Place: Full Remote
+    Positions:
+      - Title: Devops Advocate
+        Date: June 2023 - Now
+        Details:
+          - Onboard and train teams on various products (k8s, observability)
+          - Preach for good pratices
+          - Write documentation and technical showcases 
+        Badges: ['K8s', 'GitOps', 'FluxCD', 'Helm', 'Traefik', 'Hashicorp Vault', 'VictoriaMetrics', 'Prometheus', 'Grafana']
+  - Employer: Mailinblack
+    Place: Marseille, FR
+    Positions:
+      - Title: Devops / SRE
+        Date: Aug 2020 - June 2023
+        Details:
+          - Apps Containerization
+          - Setup CI/CD Pipelines
+          - Manage IAAC & Kubernetes Cluster
+          - Guiding/Tooling DEV/QA/R&D Teams
+          - Setup Metrics/Dashboard & Handling incident responses
+        Badges: ['K8s', 'Azure', 'GitlabCI', 'Helm', 'Terraform', 'Ansible', 'Jenkins', 'Python', 'Docker', 'Golang', 'ELK']
+  - Employer: OP-Rate
+    Place: Toulouse, FR
+    Positions:
+      - Title: Devops Engineer
+        Date: 2019 - 2020
+        Details:
+          - Containerization Cloud apps
+          - Design & implementation CI/CD Pipelines
+          - Architecture design of cloud infrastructure
+          - Lead customer relationship
+          - Setup IAAS Automated Solutions
+        Badges: ['K8s', 'GCP', 'GitlabCI', 'Helm', 'Terraform', 'Ansible', 'CircleCI', 'Python', 'Docker']
+  - Employer: Sopra Steria
+    Place: Toulouse, FR
+    Positions:
+      - Title: Team Lead
+        Date: 2015 - 2018
+        Details:
+          - Define needs and planification
+          - Project costing realisation
+          - Lead technical team
+          - Customer relation management
+        Badges: ['C', 'ASP', 'Gitlab', 'IIS', 'VBA', Functional 'Analysis', Team 'Management', 'Conception','Scrum']
+Education:
+  - Course: MIAGE Master Degree
+    Place: University of Toulouse
+    Date: 2012 - 2015
+    Details: Project Management & Computing science
+
+Skills:
+  - Family: Programming
+    Items:
+      - Python
+      - Bash
+      - Golang
+  - Family: Cloud
+    Items:
+      - Azure
+      - Scaleway
+      - GCP
+      - Helm
+      - Kubernetes
+  - Family: CI/CD
+    Items:
+      - Git 
+      - Docker
+      - Jenkins
+      - Gitlab/GitlabCI
+      - Release Management
+  - Family: Observability
+    Items:
+      - Grafana
+      - ELK Stack
+      - VictoriaMetrics/Prometheus
+      - SLI/SLO configuration
+
+Languages:
+  - Name: French
+    Level: Native
+  - Name: English
+  - Name: Spanish
+
+Diplomas:
+  - Microsoft Azure Fondamentals (AZ-900)
+  - Google Cloud Architect (Not Renewed)
+
+Interests:
+  - Improvisation Theater
+  - Reading
+  - Sailing
+  - LOTR
