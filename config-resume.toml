@@ -1,4 +1,3 @@
-baseURL = 'https://prideness.fr/resume'
 languageCode = 'en-us'
 title = 'Merwan Resume'
 theme = 'almeida-cv'

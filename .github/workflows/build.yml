@@ -1,0 +1,110 @@
+# Sample workflow for building and deploying a Hugo site to GitHub Pages
+name: Build hugo website
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.120.4
+    strategy:
+      matrix:
+        site: ["main", "resume"]
+        include:
+          - site: main
+            config: "config.toml"
+
+          - site: resume
+            config: "config-resume.toml"
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Install Dart Sass
+        run: sudo snap install dart-sass
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+
+      - name: Install Node.js dependencies
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+
+      - name: Build with Hugo
+        env:
+          # For maximum backward compatibility with Hugo modules
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          hugo \
+            --minify \
+            --config "${{ matrix.config }}"
+
+      - name: Store artifact builded
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-dir-${{ matrix.site }}-${{ github.sha }}
+          path: public/
+          overwrite: true
+
+  push_to_registry:
+    needs: build
+    permissions:
+      contents: read
+      packages: write
+    name: Push Docker image to Docker Hub
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        site: ["main", "resume"]
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository }}-${{ matrix.site }}
+          tags: |
+            # set latest tag for default branch
+            type=raw,value=latest,enable={{is_default_branch}}
+
+      - name: Download a single artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: public-dir-${{ matrix.site }}-${{ github.sha }}
+          path: public/
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile-${{ matrix.site }}
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
