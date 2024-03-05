@@ -7,7 +7,7 @@ paige:
     #paige-pages {
         display: none;
     }
-title: "Merwan's Home"
+title: "Home"
 ---
 <div class="column-gap-3 d-flex display-6 justify-content-center mb-3">
     {{< paige/icon class="bi bi-envelope" title="merwan.setita@gmail.com" url="mailto:merwan.setita@gmail.com" >}}
