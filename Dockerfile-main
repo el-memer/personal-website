@@ -1,3 +1,0 @@
-FROM nginx:alpine3.18
-
-COPY public/main /usr/share/nginx/html

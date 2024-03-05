@@ -2,7 +2,6 @@ languageCode = "en-us"
 title = "Merwan SETITA"
 theme = "paige"
 enableEmoji = true
-publishDir="public/main"
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
